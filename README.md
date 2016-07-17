@@ -2,6 +2,16 @@
 
 This service exposes a very simple REST api with 1 endpoint allowing [Collabosphere](https://github.com/ets-berkeley-edu/collabosphere) to generate preview images for files and links.
 
+## Dependencies
+
+### GhostScript
+
+Download and install [Ghostscript](http://ghostscript.com/download/). This dependency takes care of converting PDF pages into images.
+
+### LibreOffice
+
+Download and install [LibreOffice](http://www.libreoffice.org/download/). This dependency takes care of converting Microsoft Office files to PDFs.
+
 ## Running the application
 
 ```
