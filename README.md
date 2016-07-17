@@ -12,6 +12,10 @@ Download and install [Ghostscript](http://ghostscript.com/download/). This depen
 
 Download and install [LibreOffice](http://www.libreoffice.org/download/). This dependency takes care of converting Microsoft Office files to PDFs.
 
+### PhantomJS
+
+Download and install [PhantomJS](http://phantomjs.org/download.html). This dependency is a headless WebKit that takes care of rendering links and taking screenshots.
+
 ## Running the application
 
 ```
