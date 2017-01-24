@@ -15,12 +15,12 @@
   },
   "log": {
     "app": {
-      "level": "debug",
+      "level": "info",
       "stream": "stdout"
     },
     "process": {
-      "level": "debug",
-      "stream": "logs/process.log"
+      "level": "info",
+      "stream": "stdout"
     }
   }
 }
