@@ -1,0 +1,36 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    DATE_FORMAT: "%F %H:%M:%S"
+
+phases:
+  install:
+    commands:
+      - "echo $(date +\"${DATE_FORMAT}\") - Begin install phase (pre-build)"
+      - "echo Install jscs..."
+      - "npm install -g jscs"
+  pre_build:
+    commands:
+      - "echo $(date +\"${DATE_FORMAT}\") - Start build"
+      - "echo AWS CodeBuild src directory is ${CODEBUILD_SRC_DIR}"
+      - "npm install"
+  build:
+    commands:
+      - "echo $(date +\"${DATE_FORMAT}\") - Build started"
+      - "echo Run jscs..."
+      - "gulp jscs"
+      - "export VERSION=$(grep -m 1 version package.json | tr -dc '0-9\\.')"
+      - "export COMMIT=$(git rev-parse HEAD | cut -c 1-7)"
+      - "export ARTIFACT_NAME=suitec-preview-service_${VERSION}-${COMMIT}.zip"
+      - "echo Create ${ARTIFACT_NAME} (build artifact)..."
+      - "zip -r ${ARTIFACT_NAME} * -x logs\\*"
+  post_build:
+    commands:
+      - "echo $(date +\"${DATE_FORMAT}\") - Build completed"
+      - "echo Done. Artifact ${ARTIFACT_NAME} is ready."
+
+artifacts:
+  files:
+    - "${ARTIFACT_NAME}"
+  discard-paths: yes
