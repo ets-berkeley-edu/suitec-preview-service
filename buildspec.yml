@@ -12,14 +12,14 @@ phases:
   build:
     commands:
       - 'echo "Run jscs..."'
-      - 'gulp jscs'
+      - './node_modules/.bin/gulp jscs'
       - 'echo "Package as ZIP file"'
-      - 'zip -r "suitec-preview-service_${CODEBUILD_BUILD_ID}.zip" * -x logs\*'
+      - 'zip -r "suitec-preview-service.zip" * -x logs\*'
   post_build:
     commands:
-      - 'echo "Artifact is ready for deployment: ${ARTIFACT_NAME}"'
+      - 'echo "Artifact is ready for deployment"'
 
 artifacts:
   files:
-    - suitec-preview-service_${CODEBUILD_BUILD_ID}.zip
+    - suitec-preview-service.zip
   discard-paths: yes
