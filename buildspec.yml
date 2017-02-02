@@ -14,7 +14,7 @@ phases:
       - 'echo "Run jscs..."'
       - './node_modules/.bin/gulp jscs'
       - 'echo "Package as ZIP file"'
-      - 'zip -r "suitec-preview-service.zip" * -x logs\*'
+      - 'zip -r "suitec-preview-service.zip" * .*'
   post_build:
     commands:
       - 'echo "Artifact is ready for deployment"'
