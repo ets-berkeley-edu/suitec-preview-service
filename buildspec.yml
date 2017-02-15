@@ -1,25 +1,32 @@
 version: 0.1
 
+eb_codebuild_settings:
+  CodeBuildServiceRole: arn:aws:iam::234923831700:role/service-role/code-build-suitec-preview-service-service-role
+  ComputeType: Linux
+  Image: aws/codebuild/nodejs:6.3.1
+  Timeout: 60
+
 phases:
   install:
     commands:
-      - 'echo "Install jscs..."'
-      - 'npm install -g jscs'
+      - echo "NPM installs..."
+      - npm install --save-dev gulp
+      - npm install --save-dev gulp-jscs
+      - npm install --save-dev jscs
   pre_build:
     commands:
-      - 'echo "AWS CodeBuild src directory is ${CODEBUILD_SRC_DIR}"'
-      - 'npm install'
+      - echo "CodeBuild src directory is ${CODEBUILD_SRC_DIR}"
   build:
     commands:
-      - 'echo "Run jscs..."'
-      - './node_modules/.bin/gulp jscs'
-      - 'echo "Package as ZIP file"'
-      - 'zip -r "suitec-preview-service.zip" * .*'
+      - echo "Run jscs..."
+      - cd "${CODEBUILD_SRC_DIR}"
+      - ./node_modules/.bin/gulp jscs
   post_build:
     commands:
-      - 'echo "Artifact is ready for deployment"'
+      - echo "The 'build' phase is done"
 
 artifacts:
   files:
-    - suitec-preview-service.zip
-  discard-paths: yes
+    - '.ebextensions/**/*'
+    - '.elasticbeanstalk/**/*'
+    - '**/*'
