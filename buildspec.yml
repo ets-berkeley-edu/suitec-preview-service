@@ -9,24 +9,20 @@ eb_codebuild_settings:
 phases:
   install:
     commands:
-      - echo "NPM installs..."
-      - npm install --save-dev gulp
-      - npm install --save-dev gulp-jscs
-      - npm install --save-dev jscs
+      - npm install
   pre_build:
     commands:
-      - echo "CodeBuild src directory is ${CODEBUILD_SRC_DIR}"
+      - ./node_modules/.bin/gulp jscs
   build:
     commands:
-      - echo "Run jscs..."
-      - cd "${CODEBUILD_SRC_DIR}"
-      - ./node_modules/.bin/gulp jscs
+      - echo "build phase"
   post_build:
     commands:
-      - echo "The 'build' phase is done"
+      - rm -Rf node_modules
 
 artifacts:
   files:
-    - '.ebextensions/**/*'
-    - '.elasticbeanstalk/**/*'
+    - '.ebextensions/*'
+    - '.elasticbeanstalk/*'
+    - '.gitignore'
     - '**/*'
