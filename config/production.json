@@ -1,8 +1,8 @@
 {
   "aws": {
     "credentials": {
-      "accessKeyId": "AKIAIVBLJH34GQJLHXBA",
-      "secretAccessKey": "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"
+      "accessKeyId": "accessKeyId",
+      "secretAccessKey": "secretAccessKey"
     },
     "s3": {
       "bucket": "ets-collabosphere",
