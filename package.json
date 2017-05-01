@@ -38,6 +38,7 @@
     "mmmagic": "0.4.4",
     "request": "2.72.0",
     "shortid": "2.2.6",
+    "svg2png": "4.1.1",
     "tmp": "0.0.28",
     "webshot": "0.18.0"
   }
