@@ -3,9 +3,15 @@
 *.log
 logs/*.log
 
+config/local.json
+
 node_modules/*
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# Configs and fake services on developer workstation
+elasticmq-server-*.jar
+s3-data/*
