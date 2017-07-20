@@ -9,16 +9,16 @@ eb_codebuild_settings:
 phases:
   install:
     commands:
-      - npm install
+      - echo "install phase"
   pre_build:
     commands:
-      - ./node_modules/.bin/gulp jscs
+      - echo "pre_build phase"
   build:
     commands:
       - echo "build phase"
   post_build:
     commands:
-      - rm -Rf node_modules
+      - echo "post_build phase"
 
 artifacts:
   files:
