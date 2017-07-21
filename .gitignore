@@ -13,5 +13,6 @@ node_modules/*
 !.elasticbeanstalk/*.global.yml
 
 # Configs and fake services on developer workstation
-elasticmq-server-*.jar
+elasticmq*
+fakeS3*
 s3-data/*
