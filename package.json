@@ -16,7 +16,7 @@
     "forever": "0.15.3",
     "gm": "1.23.0",
     "gulp": "3.9.1",
-    "gulp-jscs": "2.0.0",
+    "gulp-eslint": "4.0.0",
     "htmlparser2": "3.9.2",
     "lodash": "4.17.4",
     "mmmagic": "0.4.5",
