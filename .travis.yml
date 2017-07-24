@@ -1,0 +1,22 @@
+sudo: required
+language: node_js
+node_js:
+  - "6.9.1"
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+env:
+  - CXX=g++-4.8
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libgif-dev
+  - cd ${TRAVIS_BUILD_DIR}
+
+script:
+  - node_modules/.bin/gulp travis

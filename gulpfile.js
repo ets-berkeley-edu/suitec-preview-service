@@ -23,8 +23,9 @@
  * ENHANCEMENTS, OR MODIFICATIONS.
  */
 
-var gulp = require('gulp');
 var eslint = require('gulp-eslint');
+var gulp = require('gulp');
+var runSequence = require('run-sequence');
 
 /**
  * Run ESLint to verify proper code style
@@ -35,4 +36,11 @@ gulp.task('eslint', function() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+/**
+ * Perform tests, run all linters and measure code coverage
+ */
+gulp.task('travis', function() {
+  runSequence('eslint');
 });
