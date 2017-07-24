@@ -24,14 +24,15 @@
  */
 
 var gulp = require('gulp');
-var jscs = require('gulp-jscs');
+var eslint = require('gulp-eslint');
 
 /**
- * Run the JSCS code style linter
+ * Run ESLint to verify proper code style
  */
-gulp.task('jscs', function() {
+gulp.task('eslint', function() {
   return gulp
-    .src(['app.js', 'gulpfile.js', 'process.js', 'lib/**/*.js'])
-    .pipe(jscs());
+    .src(['*.js', 'lib/**/*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
-
