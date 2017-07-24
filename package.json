@@ -1,45 +1,38 @@
 {
   "name": "preview-service",
-  "version": "1.1.0",
   "description": "Generates previews for Collabosphere",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Collabosphere",
-    "Previews"
-  ],
-  "licenses": [
-    {
-      "type": "UC Berkeley",
-      "url": "http://ipira.berkeley.edu/software-copyright-notice-and-disclaimer"
-    }
-  ],
-  "private": true,
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/ets-berkeley-edu/collabosphere.git"
   },
-  "author": "",
   "dependencies": {
-    "lodash": "4.13.1",
-    "aws-sdk": "2.4.5",
-    "body-parser": "1.15.2",
-    "bunyan": "1.8.1",
+    "aws-sdk": "2.88.0",
+    "body-parser": "1.17.2",
+    "bunyan": "2.0.0",
     "bunyan-prettystream": "0.1.3",
-    "config": "1.21.0",
-    "express": "4.14.0",
+    "config": "1.26.1",
+    "express": "4.15.3",
     "forever": "0.15.3",
-    "gm": "1.22.0",
-    "gulp": "3.9.0",
+    "gm": "1.23.0",
+    "gulp": "3.9.1",
     "gulp-jscs": "2.0.0",
     "htmlparser2": "3.9.2",
-    "mmmagic": "0.4.4",
-    "request": "2.72.0",
-    "shortid": "2.2.6",
+    "lodash": "4.17.4",
+    "mmmagic": "0.4.5",
+    "request": "2.81.0",
+    "shortid": "2.2.8",
     "svg2png": "4.1.1",
-    "tmp": "0.0.28",
+    "tmp": "0.0.31",
     "webshot": "0.18.0"
+  },
+  "main": "app.js",
+  "private": true,
+  "bugs": {
+    "url": "https://jira.ets.berkeley.edu/jira/browse/COL"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
