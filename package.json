@@ -21,6 +21,7 @@
     "lodash": "4.17.4",
     "mmmagic": "0.4.5",
     "request": "2.81.0",
+    "run-sequence": "1.2.2",
     "shortid": "2.2.8",
     "svg2png": "4.1.1",
     "tmp": "0.0.31",
