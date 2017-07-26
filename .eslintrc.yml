@@ -11,7 +11,7 @@ rules:
     - multiline: true
       minItems: 4
   array-bracket-spacing:
-    - 1
+    - 2
     - never
     - singleValue: true
   array-element-newline:
@@ -89,7 +89,7 @@ rules:
   no-dupe-keys: 2
   no-duplicate-case: 2
   # no-else-return: 2
-  # no-extra-parens: 2
+  no-extra-parens: 2
   no-empty-character-class: 2
   no-empty:
     - 2
@@ -155,7 +155,7 @@ rules:
   no-throw-literal: 2
   no-trailing-spaces: 2
   no-undef-init: 2
-  no-undefined: 0
+  no-undefined: 2
   no-underscore-dangle: 2
   no-unneeded-ternary: 2
   no-unreachable: 2
@@ -168,16 +168,14 @@ rules:
   no-useless-escape: 2
   no-void: 2
   no-warning-comments:
-    - 1
+    - 2
     - terms:
         - todo
         - fixme
         - xxx
       location: start
   no-with: 2
-  object-curly-newline:
-    - 2
-    - consistent: true
+  object-curly-newline: 2
   object-curly-spacing: 2
   one-var:
     - 2
