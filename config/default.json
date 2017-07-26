@@ -9,14 +9,14 @@
       "secretAccessKey": ""
     },
     "s3": {
-      "bucket": "ets-collabosphere",
+      "bucket": "bucket..name",
       "endpoint": null,
-      "region": "us-west-1"
+      "region": "some-valid-region"
     },
     "sqs": {
-      "queueUrl": "https://sqs.us-west-1.amazonaws.com/1234567789/ets-collabosphere-jobs",
       "endpoint": null,
-      "region": "us-west-1"
+      "queueUrl": "https://sqs.some-valid-region.amazonaws.com/000000000000/descriptive-queue-name",
+      "region": "valid-amazon-region-required"
     }
   },
   "log": {
