@@ -34,6 +34,7 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "echo 'Clean up before running tests'; rm -f logs/test.log",
+    "test": "gulp test"
   }
 }

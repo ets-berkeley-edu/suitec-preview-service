@@ -39,7 +39,14 @@ gulp.task('eslint', function() {
 });
 
 /**
- * Perform tests, run all linters and measure code coverage
+ * Perform tests and linting
+ */
+gulp.task('test', function() {
+  runSequence('eslint');
+});
+
+/**
+ * Used by Travis when scrutinizing pull requests
  */
 gulp.task('travis', function() {
   runSequence('eslint');
