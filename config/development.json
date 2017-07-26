@@ -5,14 +5,12 @@
       "secretAccessKey": "secretAccessKey"
     },
     "s3": {
-      "bucket": "ets-collabosphere",
-      "endpoint": "http://localhost:4567",
-      "region": "us-west-1"
+      "bucket": "suitec-preview-images-dev",
+      "endpoint": "http://localhost:4567"
     },
     "sqs": {
-      "queueUrl": "http://localhost:9324/queue/ets-collabosphere-jobs",
       "endpoint": "http://localhost:9324",
-      "region": "us-west-1"
+      "queueUrl": "http://localhost:9324/queue/suitec-preview-service-dev-jobs"
     }
   },
   "log": {

@@ -1,18 +1,4 @@
 {
-  "aws": {
-    "credentials": {
-      "accessKeyId": "accessKeyId",
-      "secretAccessKey": "secretAccessKey"
-    },
-    "s3": {
-      "bucket": "ets-collabosphere",
-      "region": "us-west-1"
-    },
-    "sqs": {
-      "queueUrl": "https://sqs.us-west-1.amazonaws.com/697877139013/ets-collabosphere-jobs",
-      "region": "us-west-1"
-    }
-  },
   "log": {
     "app": {
       "level": "info",
