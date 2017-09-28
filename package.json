@@ -7,7 +7,7 @@
     "url": "git://github.com/ets-berkeley-edu/suitec-preview-service.git"
   },
   "dependencies": {
-    "aws-sdk": "2.104.0",
+    "aws-sdk": "2.124.0",
     "body-parser": "1.17.2",
     "bunyan": "2.0.0",
     "bunyan-prettystream": "0.1.3",
