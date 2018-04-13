@@ -27,6 +27,9 @@
     "tmp": "0.0.31",
     "webshot": "0.18.0"
   },
+  "engines": {
+    "node": ">=6.12.2"
+  },
   "main": "app.js",
   "private": true,
   "bugs": {
