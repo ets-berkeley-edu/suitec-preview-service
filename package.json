@@ -1,6 +1,6 @@
 {
   "name": "preview-service",
-  "description": "Generates previews for SuiteC",
+  "description": "Generates preview images for SuiteC",
   "version": "1.2.2",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "gulp": "3.9.1",
     "gulp-eslint": "4.0.0",
     "htmlparser2": "3.9.2",
-    "lodash": "4.17.4",
+    "lodash": "4.17.5",
     "mmmagic": "0.4.5",
     "request": "2.81.0",
     "run-sequence": "1.2.2",
