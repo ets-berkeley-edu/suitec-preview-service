@@ -1,6 +1,6 @@
 # Preview service
 
-This service exposes a very simple REST api with 1 endpoint allowing [Collabosphere](https://github.com/ets-berkeley-edu/collabosphere) to generate preview images for files and links.
+This service exposes a very simple REST api with 1 endpoint allowing [SuiteC](https://github.com/ets-berkeley-edu/suitec) to generate preview images for files and links.
 
 ## Dependencies
 
