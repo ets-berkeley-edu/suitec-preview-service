@@ -25,29 +25,14 @@
 
 var eslint = require('gulp-eslint');
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
 
 /**
  * Run ESLint to verify proper code style
  */
-gulp.task('eslint', function() {
+gulp.task('test', function() {
   return gulp
     .src(['*.js', 'lib/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-});
-
-/**
- * Perform tests and linting
- */
-gulp.task('test', function() {
-  runSequence('eslint');
-});
-
-/**
- * Used by Travis when scrutinizing pull requests
- */
-gulp.task('travis', function() {
-  runSequence('eslint');
 });
