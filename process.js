@@ -43,7 +43,7 @@ if (!data) {
 }
 
 try {
-  var ctx = JSON.parse(new Buffer(data, 'base64').toString('utf8'));
+  var ctx = JSON.parse(Buffer.from(data, 'base64').toString('utf8'));
 } catch (err) {
   log.debug('Invalid data, exiting');
   console.error('Invalid data');
@@ -59,7 +59,7 @@ PreviewAPI.process(ctx, function(err, result) {
   }
 
   log.debug('Success, returning result');
-  var output = new Buffer(JSON.stringify(result)).toString('base64');
+  var output = Buffer.from(JSON.stringify(result)).toString('base64');
   console.log(output);
   process.exit(0);
 });
