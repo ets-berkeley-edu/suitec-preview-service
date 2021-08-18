@@ -27,14 +27,17 @@
 
 var PreviewAPI = require('./lib/preview/api');
 
-var Logger = require('./lib/core/logger');
-
 // Ensure all logging goes to the right process.log file
+var Logger = require('./lib/core/logger');
 Logger.setProcessContext();
+var log = Logger('process');
+
+log.debug('Started process.js');
 
 // The only argument to this file should've been the base64-encoded JSON-stringified Context data
 var data = process.argv[2];
 if (!data) {
+  log.debug('Missing data, exiting');
   console.error('Missing data');
   process.exit(1);
 }
@@ -42,17 +45,20 @@ if (!data) {
 try {
   var ctx = JSON.parse(new Buffer(data, 'base64').toString('utf8'));
 } catch (err) {
+  log.debug('Invalid data, exiting');
   console.error('Invalid data');
   process.exit(1);
 }
 
 PreviewAPI.process(ctx, function(err, result) {
   if (err) {
+    log.debug('Process failure, exiting');
     console.error('Failed to process the job');
     console.error(err);
     process.exit(1);
   }
 
+  log.debug('Success, returning result');
   var output = new Buffer(JSON.stringify(result)).toString('base64');
   console.log(output);
   process.exit(0);
