@@ -5,6 +5,8 @@
 # out because refactoring is necessary.
 ####################################################
 
+parserOptions:
+  ecmaVersion: 11
 rules:
   array-bracket-newline:
     - 2
