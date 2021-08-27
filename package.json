@@ -19,18 +19,18 @@
     "gulp": "4.0.2",
     "gulp-eslint": "6.0.0",
     "htmlparser2": "3.9.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "mmmagic": "0.5.3",
-    "node-gyp": "^7.1.2",
+    "node-gyp": "^8.2.0",
+    "node-webshot": "^1.0.4",
     "request": "2.88.2",
     "run-sequence": "1.2.2",
     "shortid": "2.2.8",
     "svg2png": "4.1.1",
-    "tmp": "0.0.31",
-    "webshot": "0.18.0"
+    "tmp": "0.0.31"
   },
   "engines": {
-    "node": ">=10.22.1"
+    "node": ">=14.17.3"
   },
   "main": "app.js",
   "private": true,
@@ -40,6 +40,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "pretest": "echo 'Clean up before running tests'; rm -f logs/test.log",
+    "start": "forever -a -m 10 app.js",
     "test": "gulp test"
   }
 }
