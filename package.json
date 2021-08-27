@@ -30,7 +30,7 @@
     "tmp": "0.0.31"
   },
   "engines": {
-    "node": ">=10.22.1"
+    "node": ">=14.17.3"
   },
   "main": "app.js",
   "private": true,
@@ -40,6 +40,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "pretest": "echo 'Clean up before running tests'; rm -f logs/test.log",
+    "start": "forever -a -m 10 app.js",
     "test": "gulp test"
   }
 }
