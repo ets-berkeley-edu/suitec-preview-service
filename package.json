@@ -1,7 +1,7 @@
 {
   "name": "preview-service",
   "description": "Generates previews for SuiteC",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/ets-berkeley-edu/suitec-preview-service.git"
