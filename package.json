@@ -24,7 +24,7 @@
     "node-gyp": "^8.2.0",
     "node-webshot": "^1.0.4",
     "request": "2.88.2",
-    "run-sequence": "1.2.2",
+    "run-sequence": "2.2.1",
     "shortid": "2.2.8",
     "svg2png": "4.1.1",
     "tmp": "0.0.31"
