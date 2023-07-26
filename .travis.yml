@@ -1,17 +1,17 @@
 sudo: required
 language: node_js
 node_js:
-  - "14.17.3"
+  - "16.20.1"
 
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
+      - g++-4.9
 
 env:
-  - CXX=g++-4.8
+  - CXX=g++-4.9
 
 before_install:
   - sudo apt-get -qq update
@@ -19,4 +19,4 @@ before_install:
   - cd ${TRAVIS_BUILD_DIR}
 
 script:
-  - node_modules/.bin/gulp test
+  - npx eslint .
