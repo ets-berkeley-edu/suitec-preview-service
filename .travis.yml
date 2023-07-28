@@ -1,17 +1,19 @@
+dist: focal
 sudo: required
 language: node_js
 node_js:
-  - "16.20.1"
+  # Highest Node version that sticks with npm 8.x; npm 9 doesn't play well on Travis. 
+  - "18.13.0"
 
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - g++-4.9
+      - g++-8
 
 env:
-  - CXX=g++-4.9
+  - CXX=g++-8
 
 before_install:
   - sudo apt-get -qq update

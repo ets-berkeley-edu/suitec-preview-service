@@ -29,7 +29,7 @@
     "tmp": "0.0.31"
   },
   "engines": {
-    "node": ">=16.20.1"
+    "node": ">=18.13.0"
   },
   "main": "app.js",
   "private": true,
