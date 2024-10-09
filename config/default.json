@@ -28,5 +28,8 @@
       "level": "info",
       "stream": "logs/process.log"
     }
+  },
+  "queue": {
+    "processTimeout": 60
   }
 }
